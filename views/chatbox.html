@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Chatbox</title>
+    <link rel="stylesheet" href="../styles/chatbox.css">
+</head>
+<body>
+    <div class="chatbox">
+        <div class="chatbox-header">
+             Ask prepspere Anything
+            <button id="call-button">Call</button>
+        </div>
+        <div class="chatbox-content" id="chatbox-content">
+            <!-- Messages will appear here -->
+        </div>
+        <div class="chatbox-input">
+            <input type="file" id="file-input" hidden />
+            <input type="file" id="photo-input" accept="image/*" hidden />
+            <input type="file" id="audio-input" accept="audio/*" hidden />
+            <button id="photo-button">Photo</button>
+            <button id="file-button">File</button>
+            <button id="audio-button">Audio</button>
+            <input type="text" id="chat-input" placeholder="Type a message..." />
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    <script src="../js/chatbox.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+* { 
+    margin : 0 ; 
+    padding: 0 ; 
+    
+}
+header {
+    height: 50px;
+    text-align: center; 
+    background-color:#E8DFCA;
+    padding-top: 10px; 
+}
+header p { 
+    font-weight:bold; 
+    font-size: 25px; 
+    
+}
+.box { 
+    height: 200px ; 
+    width: 200px; 
+    margin-top: 20px ; 
+    padding-top: 20px ; 
+    padding-left:30px ; 
+    background-color: white; 
+    text-align: center;
+    
+}
+.box a { 
+    margin-top: 10px ; 
+    text-decoration: none;
+    font-weight: bold ; 
+
+}
+.bookpic { 
+    background-color:red;
+    height: 150px; 
+    width: 150px; 
+    
+}
+.hero { 
+    display: flex; 
+    align-items : center; 
+    justify-content: space-evenly; 
+    flex-wrap: wrap ; 
+    background-color: #EEF7FF;
+}
+.book1 {
+    background-image: url("picc1.jpeg");
+    background-size: cover; 
+}
+.book2 {
+    background-image: url("picc2.jpeg");
+    background-size: cover; 
+}
+.book3 {
+    background-image: url("pic33.jpeg");
+    background-size: cover; 
+}
+.book4 {
+    background-image: url("pic44.jpeg");
+    background-size: cover; 
+}
+.book5 {
+    background-image: url("picc5.jpeg");
+    background-size: cover; 
+}
+.book6 {
+    background-image: url("picc66.jpeg");
+    background-size: cover; 
+}
+.book7 {
+    background-image: url("picc7.jpeg");
+    background-size: cover; 
+}
+.book8 {
+    background-image: url("picc8.jpeg");
+    background-size: cover; 
+}
+.book9 {
+    background-image: url("picc9.jpeg");
+    background-size: cover; 
+}
+.book10 {
+    background-image: url("picc10.jpeg");
+    background-size: cover; 
+}
+.book11 {
+    background-image: url("picc11.jpeg");
+    background-size: cover; 
+}
+.book12 {
+    background-image: url("picc12.jpeg");
+    background-size: cover; 
+}

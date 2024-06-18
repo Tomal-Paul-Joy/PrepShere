@@ -1,0 +1,30 @@
+* { 
+    margin: 0px; 
+    padding: 0px; 
+}
+header { 
+    height: 50px ; 
+    width: 1500px; 
+    position: relative;
+    background-color: green ; 
+    text-align : center;
+    font-size: 30px;  
+
+}
+#usersList { 
+
+       margin-top: 100px;
+       background-color: white; 
+}
+.divi { 
+    height : 50px; 
+    display: flex; 
+    box-shadow: 2px 2px -2px(0,0.5); 
+    align-items: center; 
+    font-weight: 30px; 
+    background-color: burlywood;
+    margin-bottom: 15px ;
+}
+ a { 
+    text-decoration: none;
+}

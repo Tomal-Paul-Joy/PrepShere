@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/written.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        input[type="file"] {
+            display: none;
+        }
+        .custom-file-upload {
+            display: inline-block;
+            padding: 6px 12px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .boxpic img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Time remaining : 00:30</h1>
+    </header>
+
+    <form id="uploadForm" action="/student/main/exam/bcs/written" method="post" enctype="multipart/form-data">
+        <div class="box">
+            <h2>prove your birthday age is 27 may</h2>
+            <div class="boxpic div1">
+                <div class="logo">
+                    <i class="fa-regular fa-file"></i><br>
+                    <label for="image1" class="custom-file-upload">Upload your file</label>
+                </div>
+            </div>
+            <input type="file" name="image1" id="image1">
+        </div>
+        <!-- Repeat for other images -->
+        <div class="box">
+            <h2>prove your birthday age is 27 may</h2>
+            <div class="boxpic div2">
+                <div class="logo">
+                    <i class="fa-regular fa-file"></i><br>
+                    <label for="image2" class="custom-file-upload">Upload your file</label>
+                </div>
+            </div>
+            <input type="file" name="image2" id="image2">
+        </div>
+        <div class="box">
+            <h2>prove your birthday age is 27 may</h2>
+            <div class="boxpic div3">
+                <div class="logo">
+                    <i class="fa-regular fa-file"></i><br>
+                    <label for="image3" class="custom-file-upload">Upload your file</label>
+                </div>
+            </div>
+            <input type="file" name="image3" id="image3">
+        </div>
+        <!-- Add similar blocks for image4 to image8 -->
+        <div class="box">
+            <h2>prove your birthday age is 27 may</h2>
+            <div class="boxpic div4">
+                <div class="logo">
+                    <i class="fa-regular fa-file"></i><br>
+                    <label for="image4" class="custom-file-upload">Upload your file</label>
+                </div>
+            </div>
+            <input type="file" name="image4" id="image4">
+        </div>
+        <div class="box">
+            <h2>prove your birthday age is 27 may</h2>
+            <div class="boxpic div5">
+                <div class="logo">
+                    <i class="fa-regular fa-file"></i><br>
+                    <label for="image5" class="custom-file-upload">Upload your file</label>
+                </div>
+            </div>
+            <input type="file" name="image5" id="image5">
+        </div>
+        <div class="box">
+            <h2>prove your birthday age is 27 may</h2>
+            <div class="boxpic div6">
+                <div class="logo">
+                    <i class="fa-regular fa-file"></i><br>
+                    <label for="image6" class="custom-file-upload">Upload your file</label>
+                </div>
+            </div>
+            <input type="file" name="image6" id="image6">
+        </div>
+        <div class="box">
+            <h2>prove your birthday age is 27 may</h2>
+            <div class="boxpic div7">
+                <div class="logo">
+                    <i class="fa-regular fa-file"></i><br>
+                    <label for="image7" class="custom-file-upload">Upload your file</label>
+                </div>
+            </div>
+            <input type="file" name="image7" id="image7">
+        </div>
+        <div class="box">
+            <h2>prove your birthday age is 27 may</h2>
+            <div class="boxpic div8">
+                <div class="logo">
+                    <i class="fa-regular fa-file"></i><br>
+                    <label for="image8" class="custom-file-upload">Upload your file</label>
+                </div>
+            </div>
+            <input type="file" name="image8" id="image8">
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <script src="/written.js"></script> 
+</body>
+</html>

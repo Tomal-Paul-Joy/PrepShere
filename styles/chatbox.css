@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.chatbox {
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatbox-header {
+    background-color: #153375;
+    color: white;
+    padding: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.chatbox-content {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ccc;
+}
+
+.chatbox-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#send-button, #photo-button, #file-button, #audio-button, #call-button {
+    padding: 10px;
+    border: none;
+    background-color: #35608e;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+#send-button:hover, #photo-button:hover, #file-button:hover, #audio-button:hover, #call-button:hover {
+    background-color: #3e53cb;
+}
+
+.message {
+    display: flex;
+    margin: 10px 0;
+}
+
+.message.user .message-content {
+    background-color: #1c5694;
+    color: white;
+    margin-left: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 10px 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.message.bot .message-content {
+    background-color: #e5e5ea;
+    color: black;
+    margin-right: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 10px 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.message-content {
+    padding: 10px 15px;
+    border-radius: 20px;
+    word-wrap: break-word;
+}
+
+.message-content img, .message-content audio {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.message-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.message-content a:hover {
+    text-decoration: underline;
+}
