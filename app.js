@@ -5,7 +5,8 @@ const cookiePerser = require("cookie-parser");
 const bodyparser = require("body-parser");
 require("dotenv").config(); 
 const mongoose = require("mongoose"); 
-const dbURL = process.env.MONGO_URL;  
+const dbURL = process.env.MONGO_URL; 
+const cors = require('cors');  
 mongoose.connect(dbURL) 
 .then(
     ()=> { 
@@ -19,7 +20,7 @@ mongoose.connect(dbURL)
     }
 )
 
-
+app.use(cors());
 app.use(cookiePerser());
 app.use(bodyparser.urlencoded({ extended: true })); 
 app.use(bodyparser.json()); 
@@ -33,6 +34,7 @@ app.use(userRouter);
 app.use(teacherRouter); 
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 
 
 

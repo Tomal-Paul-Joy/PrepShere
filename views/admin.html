@@ -1,0 +1,25 @@
+<!-- views/admin.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="/admin.css">
+</head>
+<body>
+    <header>
+        <h3>Admin Panel</h3>
+    </header>
+    <div class="form-container">
+        <form action="/teacher/add" method="post">
+            <label for="title">Video Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="iframeLink">Iframe Link:</label>
+            <input type="text" id="iframeLink" name="iframeLink" required>
+            <button type="submit">Add Video</button>
+        </form>
+    </div>
+</body>
+</html>

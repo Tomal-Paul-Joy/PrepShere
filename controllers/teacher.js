@@ -3,6 +3,7 @@ const Teacher = require("../models/teacher.model");
 const Session = require("../models/session.teacher.model");
 const uuid4 = require("uuid4");
 const Written = require("../models/user.written"); 
+const Pdf = require('../models/pdf'); // Adjust the path as needed 
 
 const getUser = (req, res) => { 
     res.sendFile(path.join(__dirname + "/../views/SignUp1.html")); 
@@ -81,7 +82,43 @@ const seePapers = async (req, res) => {
     res.sendFile(path.join(__dirname, "../views/paperCheck.html")); 
   };
   
+  const goToPdf =(req, res) => {
+    res.sendFile(path.join(__dirname, '/../views/pdf1.html'));
+  }; 
   
+  const createPdf =  async (req, res) => {
+    try {
+      const { bookname, booklink } = req.body;
+      const bookpic = req.file ? req.file.filename : null;
+  
+      const newPdf = new Pdf({
+        bookname,
+        bookpic,
+        booklink
+      });
+  
+      await newPdf.save();
+      res.status(201).json({ message: 'PDF created successfully' });
+    } catch (error) {
+      console.error("Error: ", error);
+      res.status(500).send("An error occurred");
+    }
+  }
+  
+  const getAllPdfs = async (req, res) => {
+    try {
+      const pdfs = await Pdf.find();
+      res.json(pdfs);
+    } catch (error) {
+      res.status(500).json({ message: 'Error retrieving PDFs', error });
+    }
+  }
+  const createVideo = (req, res) => {
+    res.sendFile(path.join(__dirname, '/../views/admin.html'));
+  }; 
+  const seeVideo =(req,res)=> { 
+    res.sendFile(path.join(__dirname,'/../views/videos.html'))
+  }
     
 module.exports = { 
     getUser,
@@ -94,4 +131,10 @@ module.exports = {
     seePapersPages,
     paperCheck,
     seePaperCheck,
+    goToPdf,
+    createPdf,
+    getAllPdfs,
+    createVideo,
+    seeVideo
+
 }
