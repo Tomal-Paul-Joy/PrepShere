@@ -78,7 +78,7 @@ const goLecture = (req,res)=> {
     res.sendFile(path.join(__dirname+"/../views/practice_test_home2.html")); 
 }
 const goLecturegk = (req,res)=> { 
-    res.sendFile(path.join(__dirname+"/../views/Expert_guide.html")); 
+    res.sendFile(path.join(__dirname+"/../views/videos.html")); 
 }
 
 const goToExamBcsMcq = (req,res) => { 

@@ -5,14 +5,13 @@ const writtenSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  images: {
-    image1: String,
-    
+  bookpic: {
+    type: String, // Store the filename as a string
   },
-  booklink: { 
+  booklink: {
     type: String,
-    require: true ,
+    required: true,
   }
 });
 
-module.exports = mongoose.model("pdf", writtenSchema);
+module.exports = mongoose.model("Pdf", writtenSchema);

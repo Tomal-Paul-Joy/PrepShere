@@ -6,19 +6,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
-    <link rel="stylesheet" href="/admin.css">
+    <link rel="stylesheet" href="/pdf.css">
 </head>
 <body>
     <header>
-        <h3>Admin Panel</h3>
+        <h3>Share Lectures</h3>
     </header>
     <div class="form-container">
         <form action="/teacher/add" method="post">
             <label for="title">Video Title:</label>
-            <input type="text" id="title" name="title" required>
-            <label for="iframeLink">Iframe Link:</label>
-            <input type="text" id="iframeLink" name="iframeLink" required>
-            <button type="submit">Add Video</button>
+            <input type="text" id="title" name="title" class ="into" required> <br>
+
+            <label for="iframeLink" class="into">Iframe Link:</label><br>
+
+            <input type="text" id="iframeLink" name="iframeLink"  class ="into" required><br>
+
+            <button type="submit" class="intobutton">Add Video</button>
         </form>
     </div>
 </body>

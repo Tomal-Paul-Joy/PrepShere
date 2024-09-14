@@ -1,6 +1,7 @@
 const path = require("path"); 
 const Teacher = require("../models/teacher.model");
 const Session = require("../models/session.teacher.model");
+const Marks = require("../models/marks"); 
 const uuid4 = require("uuid4");
 const Written = require("../models/user.written"); 
 const Pdf = require('../models/pdf'); // Adjust the path as needed 
@@ -66,8 +67,8 @@ const seePapers = async (req, res) => {
   };
   const seePaperCheck = async (req, res) => {
     try {
-        const email = req.params.userEmail; 
-        const written = await Written.findOne({ userEmail: email }); 
+        const email = req.params.userEmail;
+        const written = await Written.findOne({ userEmail: email });
         if (!written) {
             return res.status(404).send('User not found');
         }
@@ -78,9 +79,36 @@ const seePapers = async (req, res) => {
     }
 };
 
-  const paperCheck = (req, res) => {
-    res.sendFile(path.join(__dirname, "../views/paperCheck.html")); 
-  };
+const paperCheckGet = (req, res) => {
+    res.sendFile(path.join(__dirname, "../views/paperCheck.html"));
+};
+
+const paperCheckPost = async (req, res) => {
+  try {
+      const userEmail = req.params.userEmail;
+      const { qn1, qn2, qn3, qn4, qn5, qn6, qn7, qn8 } = req.body;
+
+      console.log("Received data:", { userEmail, qn1, qn2, qn3, qn4, qn5, qn6, qn7, qn8 });
+
+      const newMarks = new Marks({
+          userEmail,
+          qn1,
+          qn2,
+          qn3,
+          qn4,
+          qn5,
+          qn6,
+          qn7,
+          qn8
+      });
+
+      await newMarks.save();
+      res.status(200).send('Marks submitted successfully');
+  } catch (error) {
+      console.log("Error:", error);
+      res.status(500).send("An error occurred");
+  }
+};
   
   const goToPdf =(req, res) => {
     res.sendFile(path.join(__dirname, '/../views/pdf1.html'));
@@ -129,7 +157,8 @@ module.exports = {
     logout,
     seePapers,
     seePapersPages,
-    paperCheck,
+    paperCheckGet,
+    paperCheckPost,
     seePaperCheck,
     goToPdf,
     createPdf,
